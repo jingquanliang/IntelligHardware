@@ -52,7 +52,8 @@ subprojects {
 
     dependencies {
         compile "joda-time:joda-time:2.2"
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.2.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+//        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.2.RELEASE'
 
         compile("org.springframework.boot:spring-boot-starter-thymeleaf:2.0.1.RELEASE")
         // if use above element,there is something wrong when run the application(such as: using redis)，but nothing now
