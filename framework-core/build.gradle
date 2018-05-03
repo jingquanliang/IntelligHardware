@@ -1,0 +1,22 @@
+
+mainClassName="SystemRun.Application"
+//mainClassName="com.liwei.SpringBootSessionApplication"
+
+dependencies {
+//    compile project(':framework-dao')
+}
+
+
+bootJar {
+    baseName = 'framework-core'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+//jar {
+//
+//    baseName = 'gs-gradle'
+//    version =  '0.1.0'
+//    manifest {
+//        attributes 'Main-Class': 'SystemRun.Application'
+//    }
+//}
