@@ -53,8 +53,17 @@ subprojects {
     dependencies {
         compile "joda-time:joda-time:2.2"
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-//        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.2.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+//        compile('org.apache.tomcat.embed:tomcat-embed-jasper:8.0.30')
+//        compile 'org.springframework.boot:spring-boot-starter-tomcat'
+        // https://mvnrepository.com/artifact/org.springframework/spring-web
+        compile group: 'org.springframework', name: 'spring-web', version: '5.0.5.RELEASE'
 
+        //RestTemplate要用这个
+        compile("com.fasterxml.jackson.core:jackson-databind")
+        compile "org.apache.httpcomponents:httpclient"
+
+        //spring boot web
         compile("org.springframework.boot:spring-boot-starter-thymeleaf:2.0.1.RELEASE")
         // if use above element,there is something wrong when run the application(such as: using redis)，but nothing now
 
