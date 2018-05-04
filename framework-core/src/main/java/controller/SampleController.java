@@ -42,7 +42,7 @@ public class SampleController {
     @RequestMapping("/put")
     public String put(HttpSession session,
                       @RequestParam("key") String key,@RequestParam("value") String value){
-        session.setAttribute(key,value);
+        session.setAttribute(key, value);
         return "PUT OK";
     }
 

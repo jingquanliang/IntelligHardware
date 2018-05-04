@@ -36,7 +36,6 @@ public class LoginController {
         if (type == 0) {
             //from weixin
             logger.info("from weixin");
-
 //            RestTemplate restTemplate = new RestTemplate();
             String APPID = "wxe75bc768e291fd04";
             String SECRET = "9afb6fc9e310fea8e4350266ab3fa641";
@@ -48,8 +47,14 @@ public class LoginController {
 //            logger.info(userInfoStr);
 
         }
-        if (userInfo.getErrcode() != 40029)
-            return Host.getIPAndHostName() + "-getOpenid=" + userInfo.getOpenid() + "-getSession_key=" + userInfo.getSession_key();
+        if (userInfo.getErrcode() != 40029) //登录成功
+        {
+//            return Host.getIPAndHostName() + "-getOpenid=" + userInfo.getOpenid() + "-getSession_key=" + userInfo.getSession_key();
+            session.setAttribute(userInfo.getOpenid(), userInfo.getSession_key());
+//            String tempData = "{\"code\":1,\"openid\":\”" + userInfo.getOpenid() + "\"}";
+            String tempData = "{\"code\":1,\"openid\":\""+userInfo.getOpenid()+"\"}";
+            return tempData;
+        }
         else
             return "0";
     }
