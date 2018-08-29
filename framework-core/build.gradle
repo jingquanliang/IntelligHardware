@@ -2,9 +2,7 @@
 mainClassName="SystemRun.Application"
 //mainClassName="com.liwei.SpringBootSessionApplication"
 
-dependencies {
-//    compile project(':framework-dao')
-}
+
 
 
 bootJar {
@@ -20,3 +18,19 @@ bootJar {
 //        attributes 'Main-Class': 'SystemRun.Application'
 //    }
 //}
+
+dependencies {
+//    compile project(':framework-dao')
+
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+
+        //spring session
+        compile group: 'org.springframework.session', name: 'spring-session-data-redis', version: '2.0.2.RELEASE'
+//        compile 'org.springframework.session:spring-session-core:2.0.2.RELEASE'
+        compile "org.springframework.boot:spring-boot-starter-data-redis"
+
+        //这个地方调试了好长时间，如果用spring session，下面这个两个compile 依赖是最稳定的，不过经过从官网下载的文件看，上面两个也可以
+        //官网:https://docs.spring.io/spring-session/docs/current/reference/html5/guides/boot-redis.html#boot-running，搜索 source code
+        //进入目录：spring-session-2.0.2.RELEASE\samples\boot\redis
+        //查看spring-session-sample-boot-redis.gradle 文件，查找里面的依赖即可
+}

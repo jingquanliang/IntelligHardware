@@ -9,24 +9,27 @@
 
 
 plugins {
-    // Apply the java plugin to add support for Java web
-    id 'war'
+    // @@@@Apply the java plugin to add support for Java web
+    // id 'war'
 }
 
 mainClassName="Utility.Application"
 
-bootWar{
-    baseName = 'gs'
-    version =  '0.1'
-}
+// @@@@Apply the bootWar plugin to add support for Java web
+// bootWar{
+//     baseName = 'war-web-content'
+//     version =  '0.1.0'
+// }
 
 bootJar {
-    baseName = 'gs-spring-boot'
+    baseName = 'jar-web-content'
     version =  '0.1.0'
 }
 
 dependencies {
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.0.1.RELEASE'
+   // providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.0.1.RELEASE'
+   //@@@@the above  element is needed when packing war
+
     // compile project(':framework-core')
 
 }

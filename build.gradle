@@ -53,9 +53,11 @@ subprojects {
     dependencies {
         compile "joda-time:joda-time:2.2"
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
-//        compile('org.apache.tomcat.embed:tomcat-embed-jasper:8.0.30')
-//        compile 'org.springframework.boot:spring-boot-starter-tomcat'
+
+//the below element will add login content
+//        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+
+
         // https://mvnrepository.com/artifact/org.springframework/spring-web
         compile group: 'org.springframework', name: 'spring-web', version: '5.0.5.RELEASE'
 
@@ -85,9 +87,8 @@ subprojects {
         compile 'org.apache.commons:commons-lang3'
 
         //spring session
-        compile group: 'org.springframework.session', name: 'spring-session-data-redis', version: '2.0.2.RELEASE'
-//        compile 'org.springframework.session:spring-session-core:2.0.2.RELEASE'
-        compile "org.springframework.boot:spring-boot-starter-data-redis"
+//        compile group: 'org.springframework.session', name: 'spring-session-data-redis', version: '2.0.2.RELEASE'
+//        compile "org.springframework.boot:spring-boot-starter-data-redis"
 
         //这个地方调试了好长时间，如果用spring session，下面这个两个compile 依赖是最稳定的，不过经过从官网下载的文件看，上面两个也可以
         //官网:https://docs.spring.io/spring-session/docs/current/reference/html5/guides/boot-redis.html#boot-running，搜索 source code
