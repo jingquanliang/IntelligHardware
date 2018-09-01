@@ -1,9 +1,9 @@
 version: '3'
 services:
- j8888-compose:
+ pc-compose:
   build: .
   ports:
-     - "8887:8888"
+     - "80:80"
   #deploy:
    # replicas: 6
   volumes:
